@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
 
 .chat-container {
   display: flex;
@@ -15,16 +17,32 @@
 
 .chat-header {
   padding: 20px;
-  background: linear-gradient(90deg, #00b894, #00cec9);
+  background: linear-gradient(90deg, #0d47a1, #29b6f6, #00c853);
   color: white;
   text-align: center;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 28px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  animation: gradient-animation 5s infinite;
+  position: relative;
+  z-index: 10;
 }
 
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.chat-header {
+  background-size: 200% 200%;
+}
 
 .chat-messages {
   flex: 1;
@@ -56,7 +74,7 @@
 }
 
 .message.user {
-  background: linear-gradient(135deg, #1de9b6, #00b894);
+  background: linear-gradient(135deg, #29b6f6, #00b894);
   align-self: center;
   max-width: 20%;
   color: white;
