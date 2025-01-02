@@ -8,8 +8,6 @@ from huggingface_hub import InferenceClient
 load_dotenv()
 api_token = os.getenv('API_TOKEN')
 
-print(f"API Token: {api_token}")
-
 app = Flask(__name__, static_folder='client/build', static_url_path='/')
 
 if not os.path.exists('static'):

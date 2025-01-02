@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import "../styles/dashboard.css"
+import Sidebar from "../components/Sidebar";
 
 function Dashboard(){
 
     const [messages, setMessages] = useState([
-        { sender: "bot", text: "Hello! My name is Fifi. How can I help you today?" },
+        { sender: "bot", text: "Hi! I'm Fifi. Give me a description and I'll create an image based on it! 😊" },
     ]);
     const [input, setInput] = useState("");
 
@@ -62,6 +63,7 @@ function Dashboard(){
                         )}
                     </div>
                 ))}
+                 <Sidebar/>
             </div>
             <div className="chat-input-container">
                 <input
@@ -76,6 +78,7 @@ function Dashboard(){
                     Send
                 </button>
             </div>
+
         </div>
     );
 }
